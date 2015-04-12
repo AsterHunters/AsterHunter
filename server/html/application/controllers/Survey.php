@@ -10,6 +10,9 @@ class Survey extends CI_Controller{
     function __construct(){
             
         parent::__construct();
+        
+        $this->load->helper('url');
+        
         $this->load->model('database_model');
     }
 
@@ -22,6 +25,28 @@ class Survey extends CI_Controller{
     */
     public function index(){
         $this->load->view('survey_view');
+    }
+    
+    /**
+    * Mostra la pagina dettaglio delle rilevazioni
+    * 
+    * @access public
+    * @param
+    * @return 
+    */
+    public function detail($id){
+        
+        switch ($id) {
+            case '1':
+                $this->load->view('survey_detail1_view');
+                break;
+            case '2':
+                $this->load->view('survey_detail2_view');
+                break;
+            default:
+                $this->load->view('survey_detail1_view');
+                break;
+        }
     }
     
     /**
