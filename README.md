@@ -3,4 +3,4 @@ We aim to create an automated asteroid hunting and reporting using RaspberryPi, 
 
 ## License
 
-See the [LICENSE](LICENSE.md) file for license rights and limitations (GNU General Public License v3.0).
+See the [LICENSE](LICENSE.md) file for license rights and limitations (GNU General Public License version 3.0 (GPL-3.0)).
