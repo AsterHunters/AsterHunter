@@ -25,9 +25,9 @@ class FITSComparison:
         :param conf: DirConfiguration
         :return: list of strings
         """
-        fd1 = FITSDiff(conf["temp"] + self.image_1, conf["archive"] + self.image_2, numdiffs=self.num_differences, tolerance=self.tolerance)
-        fd2 = FITSDiff(conf["temp"] + self.image_2, conf["archive"] + self.image_3, numdiffs=self.num_differences, tolerance=self.tolerance)
-        fd3 = FITSDiff(conf["temp"] + self.image_1, conf["archive"] + self.image_3, numdiffs=self.num_differences, tolerance=self.tolerance)
+        fd1 = FITSDiff(conf["temp"] + self.image_1, conf["temp"] + self.image_2, numdiffs=self.num_differences, tolerance=self.tolerance)
+        fd2 = FITSDiff(conf["temp"] + self.image_2, conf["temp"] + self.image_3, numdiffs=self.num_differences, tolerance=self.tolerance)
+        fd3 = FITSDiff(conf["temp"] + self.image_1, conf["temp"] + self.image_3, numdiffs=self.num_differences, tolerance=self.tolerance)
 
         # eliminating first approximation interference -> no objects
         if not fd1.identical and not fd2.identical:
