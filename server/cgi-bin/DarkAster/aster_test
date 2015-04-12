@@ -1,0 +1,27 @@
+from session import Hunter
+from time import time
+ 
+def test(id,images,date,coordinates):
+    hunter = Hunter(id,images,date,coordinates)
+ 
+    hunter.configuration["temp"] = "/example/path/temp/"
+    hunter.configuration["archive"] = "/example/path/archive/"
+ 
+    hunter.makeComparison()
+ 
+    if hunter.analysis.missionSuccessful():
+        print("ASTEROIDS FOUND!! YEEEH")
+    else:
+        print("NOTHING TO REPORT :'(")
+    return
+ 
+ 
+if __name__=="__main__":
+    id = 1244
+    images = ["test1.fit", "test2.fit", "test3.fit"]
+    date = time()
+    coordinates = ["41:20:10", "25:04:15"]
+ 
+    start = time()
+    test(id, images, date, coordinates)
+    print("elapsed time:", time() - start)
