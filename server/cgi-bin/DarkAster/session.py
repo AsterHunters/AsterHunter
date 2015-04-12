@@ -21,8 +21,8 @@ class Hunter:
         self.analysis = None
         self.compared = None
 
-        self.configuration = {"temp":    "/home/alessio/AsterHunter/AsterHunter/temp/",
-                              "archive": "/home/alessio/AsterHunter/AsterHunter/archive/"}
+        self.configuration = {"temp":    "/var/www/AsterHunter/AsterHunter/temp",
+                              "archive": "/var/www/AsterHunter/AsterHunter/archive/"}
 
 
     def makeComparison(self):
